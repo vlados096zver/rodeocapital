@@ -1,0 +1,130 @@
+@import 'responsive.sсss';
+
+.doc {
+	position: relative;
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 68px;
+	@include media(sm) {
+		padding-bottom: 40px;	
+	}
+	&__holder {
+		position: relative;
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		@include media(sm) {
+			margin: 0px;
+		}
+	}
+	&__item {
+		width: calc(100% / 3 - 40px);
+		background-color: #F0F4FF;
+		border-radius: 26px;
+		padding: 20px;
+		padding-bottom: 16px;
+		margin: 0 20px;
+		margin-bottom: 32px;
+		transition: 0.25s background-color;
+		@include media(md) {
+			width: calc(100% / 2 - 40px);
+		}
+		@include media(sm) {
+			max-width: 450px;
+			width: 100%;
+			margin: 0px auto;
+			margin-bottom: 32px;
+		}
+		&:hover {
+			background-color: #D9E3FF;
+		}
+	}
+	&__title {
+		position: relative;
+		border-bottom: 1px solid #C3CEEA;
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		span {
+			min-height: 46px;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			font-size: 18px;
+			line-height: 1.26;
+			color: #181818;
+			font-weight: 500;
+		}
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 22px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		span {
+			font-size: 16px;
+			color: #2965FF;
+			padding-right: 10px;
+			font-weight: 700;
+			font-family: 'GothamPro';
+		}
+	}
+	&__view {
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		line-height: 1.2;
+		background-color: #2965FF;
+		color: #fff;
+		border-radius: 10px;
+		text-align: center;
+		padding: 18px 10px;
+		margin-top: 16px;
+		font-weight: 700;
+		font-family: 'GothamPro';
+	}
+	&__decor1,
+	&__decor2,
+	&__decor3,
+	&__decor4 {
+		position: absolute;
+		svg {
+			display: block;
+		}
+	}
+	&__decor1 {
+		top: 45px;
+		left: -120px;
+		@include media(lgs) {
+			display: none;
+		}
+	}
+	&__decor2 {
+		bottom: 114px;
+		left: 0px;
+		@include media(lgk) {
+			display: none;
+		}
+	}
+	&__decor3 {
+		top: 43%;
+		right: 8px;
+		@include media(lgk) {
+			display: none;
+		}
+	}
+	&__decor4 {
+		bottom: 30px;
+		right: 0px;
+		@include media(sm) {
+			display: none;
+		}
+	}
+}

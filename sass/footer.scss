@@ -1,0 +1,11 @@
+@import 'responsive.sсss';
+
+.footer {
+	&__text {
+		font-size: 16px;
+		line-height: 1.37;
+		color: #939393;
+		text-align: center;
+		padding: 17px 10px;
+	}
+}

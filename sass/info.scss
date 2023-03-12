@@ -1,0 +1,247 @@
+@import 'responsive.sсss';
+
+.info {
+	padding-top: 100px;
+	padding-bottom: 45px;
+	overflow: hidden;
+	.swiper-pagination,
+	.info__details {
+		display: none;
+		@include media(mdx) {
+			display: flex;
+		}
+	}
+	@include media(mdx) {
+		padding-top: 60px;
+	}
+	@include media(sm) {
+		padding-top: 0px;
+	}
+	&__holder {
+		position: relative;
+		padding: 0 54px;
+		padding-top: 35px;
+		@include media(lgxs) {
+			padding: 0 40px;
+			padding-top: 35px;
+		}
+		@include media(mdx) {
+			padding: 0px;
+			padding-top: 25px;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0px;
+			left: 0px;
+			z-index: 2;
+			width: 100%;
+			height: calc(100% - 125px);
+			background-color: #2965FF;
+			border-radius: 20px;
+		}
+	}
+	&__mobtitle {
+		display: none;
+		font-size: 40px;
+		line-height: 1.2;
+		color: #181818;
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 30px;
+		font-weight: 700;
+		font-family: 'GothamPro';
+		@include media(mdx) {
+			display: block;
+		}
+		@include media(small) { 
+			font-size: 32px;
+		}
+	}
+	&__title {
+		position: relative;
+		z-index: 3;
+		font-size: 52px;
+		line-height: 1.2;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		padding-bottom: 34px;
+		font-weight: 700;
+		font-family: 'GothamPro';
+		@include media(mdx) {
+			display: none;
+		}
+	}
+	&__wrap {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		padding-bottom: 45px;
+		margin: 0 -16px;
+		@include media(mdx) {
+			display: block;
+			margin: 0px;
+			padding-bottom: 20px;
+		}
+	}
+	&__item {
+		width: calc(100% / 3 - 32px);
+		display: flex;
+		flex-direction: column;
+		margin: 0 16px;
+		@include media(mdx) {
+			width: 100%;
+			margin: 0px;
+		}
+		&.swiper-slide {
+			height: initial;
+			@include media(mdx) {
+				padding: 0 12px;
+			}
+		}
+	}
+	&__elem {
+		position: relative;
+		z-index: 3;
+		min-height: 98px;
+		font-size: 18px;
+		line-height: 1.37;
+		color: #fff;
+		text-align: center;
+		padding: 0 18px;
+		padding-bottom: 24px;
+		font-family: 'Montserrat', sans-serif;
+		@include media(lgxs) {
+			padding: 0px;
+			padding-bottom: 24px;
+		}
+		@include media(mdx) {
+			min-height: initial;
+		}
+
+	}
+	&__desc {
+		position: relative;
+		z-index: 3;
+		flex-grow: 1;
+		background-color: #fff;
+		border-radius: 32px;
+		padding: 36px 33px;
+		ul, p, span {
+			position: relative;
+			z-index: 3;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			height: 70px;
+			border-radius: 32px;
+			background-color: #fff;
+			box-shadow: 5px 10px 30px #E6E8ED;
+			@include media(mdx) {
+				box-shadow: 5px 10px 10px #E6E8ED;
+			}
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0px;
+			bottom: 30px;
+			width: 100%;
+			height: 70px;
+			z-index: 2;
+			background-color: #fff;
+		}
+		@include media(mdx) {
+			padding: 24px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.37;
+			color: #181818;
+			font-family: 'Montserrat', sans-serif;
+			@include media(sm) {
+				font-size: 16px;
+			}
+			&:not(:last-child) {
+				padding-bottom: 18px;
+			}
+			strong {
+				color: #2965FF;
+				padding-right: 5px;
+				font-weight: 600;
+			}
+		}
+		span {
+			font-size: 16px;
+			line-height: 1.37;
+			padding-top: 8px;
+			font-weight: 500;
+		}
+		ul {
+			li {
+				position: relative;
+				font-size: 18px;
+				line-height: 1.37;
+				color: #181818;
+				padding-left: 20px;
+				margin-bottom: 18px;
+				font-family: 'Montserrat', sans-serif;
+				&:after {
+					position: absolute;
+					content: '';
+					top: 7px;
+					left: 0px;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #000000;
+				}
+			}
+		}
+	}
+	&__decor1,
+	&__decor2,
+	&__decor3 {
+		z-index: 4;
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;	
+		}
+	}
+
+	&__decor1 {
+		position: absolute;
+		left: -100px;
+		top: 150px;
+		@include media(lgs) {
+			display: none;
+		}
+	}
+	&__decor2 {
+		position: absolute;
+		right: -110px;
+		top: 100px;
+		@include media(lgxs) {
+			display: none;
+		}
+	}
+	&__decor3 {
+		position: absolute;
+		right: -34px;
+		bottom: 95px;
+		@include media(lgsm) {
+			display: none;
+		}
+	}
+	&__details {
+		display: flex;	
+		justify-content: flex-end;
+		margin-bottom: 6px;
+	}
+}

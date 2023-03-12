@@ -1,0 +1,173 @@
+@import 'responsive.sсss';
+
+* {
+  box-sizing: border-box;
+}
+
+*:after, *:before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  &--doc {
+  	max-width: 1100px;
+  }
+  &--block {
+    max-width: 760px;
+  }
+}
+
+
+body {
+  background-color: #fff;
+  color: #222;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.btn {
+	cursor: pointer;
+	display: block;
+	max-width: 216px;
+	width: 100%;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #181818;
+	background-color: #FFC700;
+	border-radius: 12px;
+	border: none;
+	padding: 21px 5px;
+	font-weight: 700;
+	font-family: 'GothamPro';
+  transition: 0.25s background-color;
+  @include media(mdx) {
+    max-width: 312px;
+  }
+  &:hover {
+    background-color: #e0b000;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    li {
+      font-size: 16px;
+      color: #181818;
+      font-weight: 500;
+      a {
+        color: #787A96;
+        margin-right: 7px;
+        transition: 0.25s color;
+        &:after {
+          margin-left: 9px;
+          content: '>';
+          color: #787A96;
+        }
+        &:hover {
+          color: #2965FF;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 52px;
+  line-height: 1.2;
+  color: #2965FF;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-family: 'GothamPro';
+  @include media(mdx) {
+    font-size: 40px;
+  }
+  @include media(sm) {
+    font-size: 32px;
+  }
+  @include media(small) {
+    font-size: 26px;
+  }
+}
+
+.factoring,
+.info {
+    &__current,
+    &__total {
+      min-width: 31px;
+      font-size: 24px;
+      line-height: 1.2;
+      color: #181818;
+      font-weight: 700;
+      font-family: 'GothamPro';
+    }
+    &__current {
+      border-right: 2px solid #181818;
+      padding-right: 12px;
+    }
+    &__total {
+      padding-left: 12px;
+    }
+}
+
+.swiper-pagination-bullets {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin-bottom: 30px;
+}
+   
+.swiper-pagination-bullet {
+  cursor: pointer;
+  position: relative;
+  width: 68px;
+  height: 24px;
+  border-radius: 2px;
+  background: transparent;
+  opacity: 1;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background: #CFD6E5;
+    border-radius: 2px;
+  }
+  &.swiper-pagination-bullet-active {
+    &:after {
+      background: #1C1D25;
+    }
+  }
+}
+
+@import 'reset';
+@import 'header';
+@import 'factoring';
+@import 'info';
+@import 'services';
+@import 'callback';
+@import 'contacts';
+@import 'footer';
+@import 'doc';
+@import 'content';
+@import 'garant';
+@import 'credit';
+@import 'popup';
+@import 'finance';
